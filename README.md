@@ -1,6 +1,6 @@
-DESC
+AWS CDK: Real-Time removes un approved IGW
 
-# P6CDKName
+# P6CDKVPCIGWProtector
 
 ## LICENSE
 
@@ -8,15 +8,15 @@ DESC
 
 ## Other
 
-![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod) ![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=p6m7g8_p6-template-cdk-construct-eslint-npm-ts-flatfile&metric=alert_status) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/p6m7g8/p6-template-cdk-construct-eslint-npm-ts-flatfile) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/p6m7g8/p6-template-cdk-construct-eslint-npm-ts-flatfile)
+![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod) ![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=p6m7g8_p6-cdk-vpc-igw-protector&metric=alert_status) ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/p6m7g8/p6-cdk-vpc-igw-protector) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/p6m7g8/p6-cdk-vpc-igw-protector)
 
 ## Usage
 
 ```ts
 ...
-import { P6CDKName } from 'p6-cdk-name';
+import { P6CDKVPCIGWProtector } from 'p6-cdk-vpc-igw-protector'
 
-new P6CDKName(this, 'P6CDKName', {
+new P6CDKVPCIGWProtector(this, 'P6CDKVPCIGWProtector', {
 });
 ```
 
