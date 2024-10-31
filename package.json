@@ -1,9 +1,9 @@
 {
-  "name": "p6-cdk-name",
-  "description": "DESC",
+  "name": "p6-cdk-vpc-igw-protector",
+  "description": "AWS CDK: Real-Time removes un approved IGW",
   "repository": {
     "type": "git",
-    "url": "https://github.com/p6m7g8/p6-template-cdk-construct-eslint-yarn-ts-flatfile.git"
+    "url": "https://github.com/p6m7g8/p6-cdk-vpc-igw-protector.git"
   },
   "scripts": {
     "act:build": "act --container-architecture linux/amd64 --container-daemon-socket - --container-options \"--memory 4g\" -j build",
@@ -49,14 +49,17 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.8.0",
+    "@types/aws-lambda": "^8.10.145",
     "@types/jest": "^29.5.14",
     "@types/node": "22.8.4",
+    "@types/source-map-support": "^0",
     "@typescript-eslint/eslint-plugin": "^8.12.2",
     "@typescript-eslint/parser": "^8.12.2",
     "aws-cdk": "^2.164.1",
     "aws-cdk-lib": "2.164.1",
     "cdk-dia": "^0.11.0",
     "constructs": "10.4.2",
+    "esbuild": "^0.24.0",
     "eslint": "^9.13.0",
     "eslint-plugin-import": "^2.31.0",
     "http-server": "^14.1.1",
@@ -76,13 +79,33 @@
     "constructs": "^10.4.2"
   },
   "dependencies": {
+    "@aws-sdk/client-ec2": "^3.683.0",
+    "@types/aws-lambda": "^8.10.145",
     "aws-cdk-lib": "2.164.1",
-    "constructs": "^10.4.2"
+    "aws-lambda": "^1.0.7",
+    "aws-sdk": "^2.1691.0",
+    "cdk-iam-floyd": "^0.658.0",
+    "constructs": "^10.4.2",
+    "source-map-support": "^0.5.21",
+    "winston": "^3.15.0"
   },
-  "bundledDependencies": [],
+  "bundledDependencies": [
+    "@aws-sdk/client-ec2",
+    "@types/aws-lambda",
+    "aws-lambda",
+    "aws-sdk",
+    "cdk-iam-floyd",
+    "source-map-support",
+    "winston"
+  ],
   "keywords": [
     "aws",
-    "cdk"
+    "cdk",
+    "vpc",
+    "igw",
+    "lambda",
+    "security",
+    "compliance"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -96,22 +119,22 @@
     },
     "targets": {
       "java": {
-        "package": "com.github.p6m7g8.p6cdkname",
+        "package": "com.github.p6m7g8.p6cdkvpcigwprotector",
         "maven": {
           "groupId": "com.github.p6m7g8",
-          "artifactId": "p6-cdk-name"
+          "artifactId": "p6-cdk-vpc-igw-protector"
         }
       },
       "python": {
-        "distName": "p6-cdk-name",
-        "module": "p6_cdk_name"
+        "distName": "p6-cdk-vpc-igw-protector",
+        "module": "p6_cdk_vpc_igw_protector"
       },
       "dotnet": {
-        "namespace": "P6m7g8.P6CDKName",
-        "packageId": "P6m7g8.P6CDKName"
+        "namespace": "P6m7g8.P6CDKVPCIGWProtector",
+        "packageId": "P6m7g8.P6CDKVPCIGWProtector"
       },
       "go": {
-        "moduleName": "github.com/p6m7g8/p6-template-cdk-construct-eslint-npm-ts-flatfile"
+        "moduleName": "github.com/p6m7g8/p6-cdk-vpc-igw-protector"
       }
     }
   },

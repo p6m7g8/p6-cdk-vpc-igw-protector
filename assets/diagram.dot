@@ -28,9 +28,60 @@ digraph "Diagram" {
     margin = 8,
   ];
   subgraph "VisualizeStack" {
-    "VisualizeStack" [
-      label = " VisualizeStack",
-      fontsize = 12,
-    ];
+    subgraph "cluster-SubGraph.VisualizeStack" {
+      graph [
+        label = "VisualizeStack",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#e4e4e4",
+      ];
+      subgraph "cluster-SubGraph.MyP6Stack" {
+        graph [
+          label = "MyP6Stack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#d6d6d6",
+        ];
+        "VisualizeStack/MyP6Stack/p6CDKVPCIGWProtector" [
+          label = " p6CDKVPCIGWProtector",
+          fontsize = 12,
+          image = "/Users/philip/.p6/p6m7g8/p6-cdk-vpc-igw-protector/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "VisualizeStack/MyP6Stack/vpcInternetGatewayAuthorizedVpcOnlyRule" [
+          label = "\nvpcInternetGatewayAut",
+          fontsize = 12,
+          image = "/Users/philip/.p6/p6m7g8/p6-cdk-vpc-igw-protector/node_modules/cdk-dia/icons/aws/Service/Arch_App-Integration/Arch_64/Arch_Amazon-EventBridge_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+      }
+    }
   }
+  "VisualizeStack/MyP6Stack/vpcInternetGatewayAuthorizedVpcOnlyRule" -> "VisualizeStack/MyP6Stack/p6CDKVPCIGWProtector" [
+    dir = "both",
+  ];
 }

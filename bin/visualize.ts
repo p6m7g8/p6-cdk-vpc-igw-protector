@@ -1,12 +1,12 @@
 import type { Construct } from 'constructs'
 import * as cdk from 'aws-cdk-lib'
-import { P6CDKName } from '../src'
+import { P6CDKVPCIGWProtector } from '../src'
 
 class VisualizeStack extends cdk.Stack {
   constructor(scope: Construct, id: string) {
     super(scope, id)
 
-    new P6CDKName(this, 'MyP6Stack', {
+    new P6CDKVPCIGWProtector(this, 'MyP6Stack', {
     })
   }
 }
