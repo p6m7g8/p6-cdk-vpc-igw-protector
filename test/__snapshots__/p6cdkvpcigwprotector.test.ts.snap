@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`p6CDKVPCIGWProtector snapshot test 1`] = `
+{
+  "Parameters": {
+    "BootstrapVersion": {
+      "Default": "/cdk-bootstrap/hnb659fds/version",
+      "Description": "Version of the CDK Bootstrap resources in this environment, automatically retrieved from SSM Parameter Store. [cdk:skip]",
+      "Type": "AWS::SSM::Parameter::Value<String>",
+    },
+  },
+  "Resources": {
+    "p6cdkvpcigwprotectorp6CDKVPCIGWProtector23CE1718": {
+      "DependsOn": [
+        "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRoleDefaultPolicyB91EFBAD",
+        "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRole79E45E64",
+      ],
+      "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Fn::Sub": "cdk-hnb659fds-assets-\${AWS::AccountId}-\${AWS::Region}",
+          },
+          "S3Key": "3c388371783f09cc298c0b4d2191de48c7ab204b29dc446f07becf8da02f5f9a.zip",
+        },
+        "Handler": "index.handler",
+        "Role": {
+          "Fn::GetAtt": [
+            "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRole79E45E64",
+            "Arn",
+          ],
+        },
+        "Runtime": "nodejs20.x",
+        "Timeout": 5,
+        "TracingConfig": {
+          "Mode": "Active",
+        },
+      },
+      "Type": "AWS::Lambda::Function",
+    },
+    "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRole79E45E64": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "lambda.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                "arn:",
+                {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRoleDefaultPolicyB91EFBAD": {
+      "Properties": {
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+            {
+              "Action": [
+                "ec2:DeleteInternetGateway",
+                "ec2:DescribeInternetGateways",
+                "ec2:DescribeVpcs",
+                "ec2:DetachInternetGateway",
+              ],
+              "Effect": "Allow",
+              "Resource": "*",
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "PolicyName": "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRoleDefaultPolicyB91EFBAD",
+        "Roles": [
+          {
+            "Ref": "p6cdkvpcigwprotectorp6CDKVPCIGWProtectorServiceRole79E45E64",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Policy",
+    },
+    "p6cdkvpcigwprotectorvpcInternetGatewayAuthorizedVpcOnlyRule5FE5A2BB": {
+      "Properties": {
+        "Description": "Detect unexpected Vpc Internet Gateways and remediates",
+        "EventPattern": {
+          "detail": {
+            "eventName": [
+              "AttachInternetGateway",
+            ],
+            "eventSource": [
+              "ec2.amazonaws.com",
+            ],
+          },
+          "source": [
+            "aws.ec2",
+          ],
+        },
+        "State": "ENABLED",
+        "Targets": [
+          {
+            "Arn": {
+              "Fn::GetAtt": [
+                "p6cdkvpcigwprotectorp6CDKVPCIGWProtector23CE1718",
+                "Arn",
+              ],
+            },
+            "Id": "Target0",
+          },
+        ],
+      },
+      "Type": "AWS::Events::Rule",
+    },
+    "p6cdkvpcigwprotectorvpcInternetGatewayAuthorizedVpcOnlyRuleAllowEventRuleMyStackp6cdkvpcigwprotectorp6CDKVPCIGWProtectorE270487FC72DF2A9": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": {
+          "Fn::GetAtt": [
+            "p6cdkvpcigwprotectorp6CDKVPCIGWProtector23CE1718",
+            "Arn",
+          ],
+        },
+        "Principal": "events.amazonaws.com",
+        "SourceArn": {
+          "Fn::GetAtt": [
+            "p6cdkvpcigwprotectorvpcInternetGatewayAuthorizedVpcOnlyRule5FE5A2BB",
+            "Arn",
+          ],
+        },
+      },
+      "Type": "AWS::Lambda::Permission",
+    },
+  },
+  "Rules": {
+    "CheckBootstrapVersion": {
+      "Assertions": [
+        {
+          "Assert": {
+            "Fn::Not": [
+              {
+                "Fn::Contains": [
+                  [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                  ],
+                  {
+                    "Ref": "BootstrapVersion",
+                  },
+                ],
+              },
+            ],
+          },
+          "AssertDescription": "CDK bootstrap stack version 6 required. Please run 'cdk bootstrap' with a recent version of the CDK CLI.",
+        },
+      ],
+    },
+  },
+}
+`;
