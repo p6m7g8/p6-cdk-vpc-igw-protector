@@ -59,7 +59,7 @@
     "@typescript-eslint/eslint-plugin": "^8.46.2",
     "@typescript-eslint/parser": "^8.46.2",
     "aws-cdk": "^2.1031.0",
-    "aws-cdk-lib": "^2.220.0",
+    "aws-cdk-lib": "^2.221.0",
     "cdk-dia": "^0.12.1",
     "constructs": "^10.4.2",
     "esbuild": "^0.25.11",
@@ -82,9 +82,9 @@
     "constructs": "^10.4.2"
   },
   "dependencies": {
-    "@aws-sdk/client-ec2": "^3.916.0",
+    "@aws-sdk/client-ec2": "^3.917.0",
     "@types/aws-lambda": "^8.10.156",
-    "aws-cdk-lib": "^2.220.0",
+    "aws-cdk-lib": "^2.221.0",
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1692.0",
     "cdk-iam-floyd": "^0.727.0",
