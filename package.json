@@ -82,12 +82,12 @@
     "constructs": "^10.4.2"
   },
   "dependencies": {
-    "@aws-sdk/client-ec2": "^3.917.0",
+    "@aws-sdk/client-ec2": "^3.918.0",
     "@types/aws-lambda": "^8.10.156",
     "aws-cdk-lib": "^2.221.0",
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1692.0",
-    "cdk-iam-floyd": "^0.727.0",
+    "cdk-iam-floyd": "^0.728.0",
     "constructs": "^10.4.2",
     "source-map-support": "^0.5.21",
     "winston": "^3.18.3"
