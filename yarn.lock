@@ -287,9 +287,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-ec2@npm:^3.936.0":
-  version: 3.936.0
-  resolution: "@aws-sdk/client-ec2@npm:3.936.0"
+"@aws-sdk/client-ec2@npm:^3.937.0":
+  version: 3.937.0
+  resolution: "@aws-sdk/client-ec2@npm:3.937.0"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:5.2.0"
     "@aws-crypto/sha256-js": "npm:5.2.0"
@@ -332,7 +332,7 @@ __metadata:
     "@smithy/util-utf8": "npm:^4.2.0"
     "@smithy/util-waiter": "npm:^4.2.5"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/0e766a3265c606ea61da14e6fcb846eedca855f7303c54bd595100537f52bfcee460c5f325ea39047c28a152075e46dc7a2c718c357fd78e9fa5bf9252ac2c67
+  checksum: 10c0/24df749754089242b0ebcdfbc3f6ca30c5b42d25e51b35d27caca902ecc44375cfb02a3bed441bd502eb4aba9cdc518d7dce97b75b1b0958eee38f1c66dbe84c
   languageName: node
   linkType: hard
 
@@ -4975,9 +4975,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aws-cdk-lib@npm:^2.225.0":
-  version: 2.225.0
-  resolution: "aws-cdk-lib@npm:2.225.0"
+"aws-cdk-lib@npm:^2.227.0":
+  version: 2.227.0
+  resolution: "aws-cdk-lib@npm:2.227.0"
   dependencies:
     "@aws-cdk/asset-awscli-v1": "npm:2.2.242"
     "@aws-cdk/asset-node-proxy-agent-v6": "npm:^2.1.0"
@@ -4995,7 +4995,7 @@ __metadata:
     yaml: "npm:1.10.2"
   peerDependencies:
     constructs: ^10.0.0
-  checksum: 10c0/d53c56dfb7a7c2725973542626d788744c2ed7863adc5a769cc0190b521248a64bfdc152451f56bd24bff2ca1e662ee8fba721c78e40be8521f07b33e7d9aabb
+  checksum: 10c0/e97d2a7549558d9dde21253eaf23c84cefee87dd501bddd563ae02fd7458dde2d348839ba5d409ee8bca51c01deff6124618bcbb293e003e22d5c7b12d1c9fe6
   languageName: node
   linkType: hard
 
@@ -10589,7 +10589,7 @@ __metadata:
   resolution: "p6-cdk-vpc-igw-protector@workspace:."
   dependencies:
     "@antfu/eslint-config": "npm:^6.2.0"
-    "@aws-sdk/client-ec2": "npm:^3.936.0"
+    "@aws-sdk/client-ec2": "npm:^3.937.0"
     "@types/aws-lambda": "npm:^8.10.159"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.10.1"
@@ -10597,7 +10597,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^8.47.0"
     "@typescript-eslint/parser": "npm:^8.47.0"
     aws-cdk: "npm:^2.1033.0"
-    aws-cdk-lib: "npm:^2.225.0"
+    aws-cdk-lib: "npm:^2.227.0"
     aws-lambda: "npm:^1.0.7"
     aws-sdk: "npm:^2.1692.0"
     cdk-dia: "npm:^0.12.1"
