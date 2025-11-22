@@ -287,9 +287,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-ec2@npm:^3.937.0":
-  version: 3.937.0
-  resolution: "@aws-sdk/client-ec2@npm:3.937.0"
+"@aws-sdk/client-ec2@npm:^3.938.0":
+  version: 3.938.0
+  resolution: "@aws-sdk/client-ec2@npm:3.938.0"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:5.2.0"
     "@aws-crypto/sha256-js": "npm:5.2.0"
@@ -332,7 +332,7 @@ __metadata:
     "@smithy/util-utf8": "npm:^4.2.0"
     "@smithy/util-waiter": "npm:^4.2.5"
     tslib: "npm:^2.6.2"
-  checksum: 10c0/24df749754089242b0ebcdfbc3f6ca30c5b42d25e51b35d27caca902ecc44375cfb02a3bed441bd502eb4aba9cdc518d7dce97b75b1b0958eee38f1c66dbe84c
+  checksum: 10c0/6a33ec4c59a16410e9507bb2003e9c96316f69d94a0a4c9a02d4c438c751f233673f4a2cf24ee722f1497d2fd17c5685aee0556ef964f3fc09d1197b3af855f5
   languageName: node
   linkType: hard
 
@@ -5429,16 +5429,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cdk-iam-floyd@npm:^0.732.0":
-  version: 0.732.0
-  resolution: "cdk-iam-floyd@npm:0.732.0"
+"cdk-iam-floyd@npm:^0.733.0":
+  version: 0.733.0
+  resolution: "cdk-iam-floyd@npm:0.733.0"
   dependencies:
     "@udondan/common-substrings": "npm:3.0.2"
     regex-parser: "npm:2.3.1"
   peerDependencies:
     aws-cdk-lib: ^2.0.0
     constructs: ^10.0.0
-  checksum: 10c0/ba69fea2f234fb148c0f2b19d0e29ed3bac61fe8043b1be45b243c73ea75a4f118a637b0b1a3660a122ea9ee2f4ddb179dab2d9ee7af053c123b5677d4d22628
+  checksum: 10c0/81069d4ada4afb487271efbdcf6b9c416ef60c0a2bd84c69a2c1478394926d9961300dc84c6a6d149c2db22231cc3b99b4eee5ba69881feee2f34ef554e85f6b
   languageName: node
   linkType: hard
 
@@ -10589,7 +10589,7 @@ __metadata:
   resolution: "p6-cdk-vpc-igw-protector@workspace:."
   dependencies:
     "@antfu/eslint-config": "npm:^6.2.0"
-    "@aws-sdk/client-ec2": "npm:^3.937.0"
+    "@aws-sdk/client-ec2": "npm:^3.938.0"
     "@types/aws-lambda": "npm:^8.10.159"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^24.10.1"
@@ -10601,7 +10601,7 @@ __metadata:
     aws-lambda: "npm:^1.0.7"
     aws-sdk: "npm:^2.1692.0"
     cdk-dia: "npm:^0.12.1"
-    cdk-iam-floyd: "npm:^0.732.0"
+    cdk-iam-floyd: "npm:^0.733.0"
     constructs: "npm:^10.4.3"
     esbuild: "npm:^0.27.0"
     eslint: "npm:^9.39.1"
