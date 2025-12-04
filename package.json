@@ -51,7 +51,7 @@
     "node": ">= 24.9.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^6.3.0",
+    "@antfu/eslint-config": "^6.4.1",
     "@types/aws-lambda": "^8.10.159",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
@@ -62,7 +62,7 @@
     "aws-cdk-lib": "^2.231.0",
     "cdk-dia": "^0.12.1",
     "constructs": "^10.4.3",
-    "esbuild": "^0.27.0",
+    "esbuild": "^0.27.1",
     "eslint": "^9.39.1",
     "eslint-plugin-import": "^2.32.0",
     "http-server": "^14.1.1",
