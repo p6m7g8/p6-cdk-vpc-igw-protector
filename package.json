@@ -90,7 +90,7 @@
     "cdk-iam-floyd": "^0.734.0",
     "constructs": "^10.4.3",
     "source-map-support": "^0.5.21",
-    "winston": "^3.18.3"
+    "winston": "^3.19.0"
   },
   "bundledDependencies": [
     "@aws-sdk/client-ec2",
