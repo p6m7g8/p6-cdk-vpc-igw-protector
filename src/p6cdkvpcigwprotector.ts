@@ -22,7 +22,7 @@ export class P6CDKVPCIGWProtector extends cdk.Resource {
       .on('*')
 
     const fn = new lambdajs.NodejsFunction(this, 'p6CDKVPCIGWProtector', {
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_24_X,
       timeout: cdk.Duration.seconds(5),
       tracing: lambda.Tracing.ACTIVE,
       bundling: {
